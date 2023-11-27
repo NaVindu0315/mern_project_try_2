@@ -5,6 +5,8 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const app = express();
 
+require("dotenv").config();
+
 
 const PORT = process.env.PORT || 8070;
 
@@ -35,5 +37,5 @@ connection.once("open",()=>
 app.listen(PORT,()=>
 
 {
-    console.log("server is up and runnging on port ${PORT} ");
+    console.log("server is up and runnging on port : ${PORT} ");
 })
