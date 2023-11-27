@@ -16,10 +16,10 @@ app.use(bodyParser.json());
 const URL = process.env.MONGODB_URL;
 
 mongoose.connect(URL,{
-    useCreateIndex :true,
+    
     useNewUrlParser :true,
     UseUnifiedTopology :true,
-    useFindAndModify :false
+    
 
 
 }
@@ -34,8 +34,12 @@ connection.once("open",()=>
 
 )
 
-app.listen(PORT,()=>
+/*app.listen(PORT,()=>
 
 {
-    console.log("server is up and runnging on port : ${PORT} ");
-})
+    console.log('server is up and runnging on port : ${String(PORT)} ');
+})*/
+///bard code 
+app.listen(PORT);
+
+console.log('Server is up and running on port:', PORT);
